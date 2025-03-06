@@ -10,6 +10,7 @@ const backendUrl = import.meta.env.VITE_BACKENDURI;
   const handlingSubmit = async(e) => {
     e.preventDefault();
     try {
+
     const response = await axios.get(backendUrl+"/api/greet?name="+name)
     const {message} = response.data;  
     setGreet(message)
@@ -20,6 +21,7 @@ const backendUrl = import.meta.env.VITE_BACKENDURI;
 
   return (
     <>
+      <h2>Greeting App</h2>
     <form onSubmit={handlingSubmit} method='GET'>
       <input onChange={(e)=>setName(e.target.value)} value={name} type="text" name='name' placeholder='Enter Name' /> &nbsp;
       <button type='submit'>Get Greeting</button>  

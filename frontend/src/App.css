@@ -49,4 +49,8 @@ input{
   width: 300px;
   font-size: 20px;
   padding-left: 10px;
+  
+}
+h2{
+  padding-bottom: 1rem;
 }
